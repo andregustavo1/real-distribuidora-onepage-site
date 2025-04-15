@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Phone, ClipboardList, FileText, Truck, UserCheck } from "lucide-react";
 
@@ -48,16 +47,14 @@ const HowWeWork = () => {
         >
           <h2 className="section-title">Como Trabalhamos</h2>
           <p className="section-subtitle">
-            Conheça nossa metodologia para garantir a melhor experiência para sua empresa
+            Nossa metodologia para garantir a melhor experiência para sua empresa
           </p>
         </motion.div>
 
         <div className="relative">
-          {/* Timeline line */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-real-light-green/30 transform -translate-x-1/2 z-0"></div>
 
-          {/* Timeline steps */}
-          <div className="space-y-12 md:space-y-0 relative z-10">
+          <div className="space-y-12 md:space-y-24 relative z-10">
             {steps.map((step, index) => (
               <motion.div
                 key={step.id}
@@ -65,11 +62,11 @@ const HowWeWork = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
-                className={`flex flex-col md:flex-row items-center md:gap-10 ${
+                className={`flex flex-col md:flex-row items-center md:gap-16 ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:text-right" : "md:text-left"} mb-4 md:mb-0`}>
+                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:text-right" : "md:text-left"} mb-4 md:mb-0 text-center md:text-left`}>
                   <h3 className="text-xl font-bold text-real-dark-green mb-2">
                     {step.title}
                   </h3>

@@ -7,14 +7,12 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import ProductLines from "../components/ProductLines";
 import Services from "../components/Services";
 import HowWeWork from "../components/HowWeWork";
-import ServiceArea from "../components/ServiceArea";
 import Contact from "../components/Contact";
 import LastCTA from "../components/LastCTA";
 import Footer from "../components/Footer";
 import ProgressBar from "../components/ProgressBar";
 
 const Index = () => {
-  // Scroll animations
   useEffect(() => {
     const animateOnScroll = () => {
       const elements = document.querySelectorAll(".animate-on-scroll");
@@ -48,7 +46,6 @@ const Index = () => {
       <ProductLines />
       <Services />
       <HowWeWork />
-      <ServiceArea />
       <Contact />
       <LastCTA />
       <Footer />

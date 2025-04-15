@@ -35,8 +35,8 @@ const Header = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <a href="#" className="text-2xl font-bold text-real-dark-green">
-            REAL<span className="text-real-light-green">DISTRIBUIDORA</span>
+          <a href="#" className="block">
+            <img src="/logo.png" alt="REAL DISTRIBUIDORA" className="h-12 w-auto" />
           </a>
         </motion.div>
 

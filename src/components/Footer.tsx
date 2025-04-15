@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Instagram, Linkedin, Facebook, ChevronUp } from "lucide-react";
 
@@ -28,6 +27,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+              <img src="/logo.png" alt="REAL DISTRIBUIDORA" className="h-16 w-auto mb-4 invert" />
               <h3 className="text-2xl font-bold mb-4">
                 REAL<span className="text-real-light-green">DISTRIBUIDORA</span>
               </h3>

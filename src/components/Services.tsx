@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { UserCheck, Truck, Wrench, ClipboardList, ChevronRight } from "lucide-react";
@@ -37,7 +36,6 @@ const Services = () => {
     },
   ];
 
-  // WhatsApp link with pre-filled message
   const whatsappLink = "https://wa.me/5595911814470?text=Olá,%20gostaria%20de%20conhecer%20mais%20detalhes%20sobre%20os%20serviços%20da%20REAL%20DISTRIBUIDORA.";
 
   return (
@@ -76,7 +74,7 @@ const Services = () => {
                     }`}
                     onClick={() => setActiveService(index)}
                   >
-                    <div className="flex items-center space-x-3">
+                    <div className="flex flex-col items-center text-center space-y-2">
                       <div
                         className={`rounded-full p-2 ${
                           activeService === index
@@ -86,7 +84,7 @@ const Services = () => {
                       >
                         {service.icon}
                       </div>
-                      <h3 className="font-semibold">{service.title}</h3>
+                      <h3 className="font-semibold text-sm">{service.title}</h3>
                     </div>
                   </div>
                 ))}
