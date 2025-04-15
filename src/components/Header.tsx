@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "navbar-solid" : "navbar-transparent"
+        scrolled ? "navbar-solid" : "navbar-solid"
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -36,7 +36,7 @@ const Header = () => {
           transition={{ duration: 0.5 }}
         >
           <a href="#" className="block">
-            <img src="/logo.png" alt="REAL DISTRIBUIDORA" className="h-12 w-auto" />
+            <img src="/img/logo.png" alt="REAL DISTRIBUIDORA" className="h-14 w-auto" />
           </a>
         </motion.div>
 
@@ -74,7 +74,7 @@ const Header = () => {
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center"
           >
-            Solicitar Orçamento
+            Contate-nos
             <ChevronRight className="ml-2 h-4 w-4" />
           </a>
         </motion.div>

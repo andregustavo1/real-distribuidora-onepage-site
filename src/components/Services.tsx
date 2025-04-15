@@ -40,7 +40,7 @@ const Services = () => {
 
   return (
     <section id="servicos" className="section-padding bg-gray-50">
-      <div className="container mx-auto">
+      <div className="px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

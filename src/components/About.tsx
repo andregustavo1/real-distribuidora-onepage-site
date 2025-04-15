@@ -64,20 +64,7 @@ const About = () => {
               </div>
             </div>
           </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="rounded-lg overflow-hidden shadow-xl"
-          >
-            <img 
-              src="/about-image.jpg" 
-              alt="REAL DISTRIBUIDORA estrutura" 
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
+
         </div>
       </div>
     </section>
