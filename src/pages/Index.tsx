@@ -1,12 +1,57 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import WhyChooseUs from "../components/WhyChooseUs";
+import ProductLines from "../components/ProductLines";
+import Services from "../components/Services";
+import HowWeWork from "../components/HowWeWork";
+import ServiceArea from "../components/ServiceArea";
+import Contact from "../components/Contact";
+import LastCTA from "../components/LastCTA";
+import Footer from "../components/Footer";
+import ProgressBar from "../components/ProgressBar";
 
 const Index = () => {
+  // Scroll animations
+  useEffect(() => {
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll(".animate-on-scroll");
+      elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        const isInView = 
+          rect.top <= window.innerHeight * 0.85 && 
+          rect.bottom >= 0;
+        
+        if (isInView) {
+          element.classList.add("animate-fade-in");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", animateOnScroll);
+    animateOnScroll(); // Initial check
+    
+    return () => {
+      window.removeEventListener("scroll", animateOnScroll);
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-white">
+      <ProgressBar />
+      <Header />
+      <Hero />
+      <About />
+      <WhyChooseUs />
+      <ProductLines />
+      <Services />
+      <HowWeWork />
+      <ServiceArea />
+      <Contact />
+      <LastCTA />
+      <Footer />
     </div>
   );
 };
